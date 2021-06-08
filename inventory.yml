@@ -1,6 +1,6 @@
 web:
   hosts:
-    34.243.241.207
+          ip_address
   vars:
     ansible_user: ubuntu
     ansible_ssh_private_key_file: ~/ansibleKey

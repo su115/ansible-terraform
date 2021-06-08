@@ -11,7 +11,7 @@ resource "aws_instance" "server"{
   associate_public_ip_address = true
   key_name = "ansible"
   tags = {
-    Name = "Ubuntu-Ansible"
+    Name = "Ubuntu-${count.index}"
   }
 }
 
@@ -38,3 +38,15 @@ resource "aws_security_group" "ssh" {
   }
 
 }
+
+
+output "all_ip"{
+value = aws_instance.server.*.public_ip
+
+}
+
+
+
+
+
+
