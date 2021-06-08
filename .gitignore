@@ -1,3 +1,4 @@
 ansible*
 terra*
 .terra*
+!ansible.cfg
